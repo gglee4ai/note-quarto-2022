@@ -1,0 +1,60 @@
+---
+title: "quarto-04"
+format: html
+editor: visual
+crossref:
+  fig-title: Fig     # (default is "Figure")
+
+---
+
+![Elephant](elephant.png){#fig-elephant}
+
+@fig-elephant 는 위와 같다. 
+
+
+```{r}
+#| column: page
+
+knitr::kable(
+  mtcars[1:6, 1:10]
+)
+```
+
+```{r}
+#| column: screen
+
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+#| column: screen-inset-shaded
+#| layout-nrow: 1
+
+plot(cars)
+plot(iris)
+plot(pressure)
+```
+
+
+```{r}
+library(flextable)
+mtcars |> 
+  head() |> 
+  flextable()
+```
+

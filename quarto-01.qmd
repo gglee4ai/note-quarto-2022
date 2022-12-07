@@ -1,0 +1,223 @@
+---
+title: "quarto-01"
+format: html
+editor: visual
+---
+
+## Markdown Basics
+
+*italics*
+
+**bold**
+
+superscript^2^
+
+subscript~2~
+
+~~strikethrough~~
+
+`verbatim code`
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+<https://quarto.org>
+
+[Quarto](https://quarto.org)
+
+![Caption](elephant.png){width="300"}
+
+[![Caption](elephant.png){width="300"}](https://quarto.org)
+
+[![Caption](elephant.png){width="300"}](https://quarto.org)
+
+[![](elephant.png){fig-alt="Alt text" width="300"}](https://quarto.org)
+
+-   unordered list
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+-   item 2
+    -   Continued
+    -   Continued
+
+1.  ordered list
+2.  item 2
+    i)  sub-item 1
+    ii) test 2
+        A.  sub-sub-item 1
+        B.  This
+
+Continues after
+
+term
+
+:   definition
+
+This is $b_0$ math.
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+    code
+
+```{r}
+1 + 1
+```
+
+This is $E = mc^{2}$ !
+
+$$
+E = mc^{2}
+$$
+
+$$
+ \def\RR{{\bf R}}
+ \def\bold#1{{\bf #1}}
+$$
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+page 1
+
+{{< pagebreak >}}
+
+page 2
+
+::: border
+This content can be styled with a border
+:::
+
+::: {#special .sidebar}
+::: warning
+Here is a warning.
+:::
+
+More content.
+:::
+
+[This is *some text*]{.class key="val"}
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+::: callout-tip
+This is test
+:::
+
+> Blockquote
+
+| Line Block
+|   Spaces and newlines
+|   are preserved
+
+emdah: --
+
+emdash: ---
+
+## Figures
+
+![Elephant](elephant.png){width="300"}
+
+[![Elephant](elephant.png){width="300"}](https://en.wikipedia.org/wiki/Elephant)
+
+![](elephant.png){fig-align="left" width="300" fig-alt="A drawing of an elephant."}
+
+::: {#fig-elephants layout-ncol="2"}
+![Surus](consumer.png){#fig-surus}
+
+![Hanno](elephant.png){#fig-hanno}
+
+Famous Elephants
+:::
+
+::: {layout-ncol="2"}
+![Surus](consumer.png)
+
+![Hanno](elephant.png)
+:::
+
+::: {#fig-elephant}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SNggmeilXDQ">
+
+</iframe>
+
+Elephant
+:::
+
+```{r}
+#| layout-ncol: 2
+#| fig-cap: 
+#|   - "Speed and Stopping Distances of Cars"
+#|   - "Vapor Pressure of Mercury as a Function of Temperature"
+
+plot(cars)
+plot(pressure)
+```
+
+```{r}
+#| label: fig-charts
+#| fig-cap: Charts
+#| fig-subcap:
+#|   - "Cars"
+#|   - "Pressure"
+#|layout-ncol:2
+
+plot(cars)
+plot(pressure)
+
+```
+
+```{r}
+#| layout: [[45,-10, 45], [100]]
+
+plot(cars)
+plot(pressure)
+plot(mtcars)
+```
+
+
+::: {layout-ncol=2}
+### List One
+
+- Item A
+- Item B
+- Item C
+
+### List Two
+
+- Item X
+- Item Y
+- Item Z
+:::
+
+
+::: {layout-ncol=2}
+- Item X
+- Item Y
+- Item Z
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida eu erat et fring. Morbi congue augue vel eros ullamcorper, eget convallis tortor sagittis. Fusce sodales viverra mauris a fringilla. Donec feugiat, justo eu blandit placerat, enim dui volutpat turpis, eu dictum lectus urna eu urna. Mauris sed massa ornare, interdum ipsum a, semper massa. 
+:::
+
